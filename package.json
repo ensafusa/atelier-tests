@@ -1,0 +1,27 @@
+{
+  "name": "atelier-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "test:unit": "jest tests/unit --coverage",
+    "test:int": "jest tests/integration --runInBand",
+    "test:e2e": "playwright test"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/e2e/"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.x.x",
+    "pg": "^8.x.x"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.x.x",
+    "jest": "^29.x.x",
+    "supertest": "^7.x.x"
+  }
+}
